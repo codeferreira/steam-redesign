@@ -4,23 +4,24 @@ export const THEME = extendTheme({
   colors: {
     gray: {
       900: "#212328",
-      600: "#323538",
+      600: "#32353B",
+      400: "#5E6065",
       300: "#757575",
       100: "#ECEFF4",
     },
     green: {
-      promo: "#81AE3E",
-      highlight: "#A4D008",
+      500: "#81AE3E",
+      400: "#A4D008",
     },
     yellow: {
-      warn: "#FFD60A",
+      400: "#FFD60A",
     },
     blue: {
-      main: "#3A82F7",
-      secondary: "#5AA0EA",
+      400: "#3A82F7",
+      300: "#5AA0EA",
     },
     red: {
-      highlight: "#FF453A",
+      400: "#FF453A",
     },
     white: "#FFFFFF",
   },

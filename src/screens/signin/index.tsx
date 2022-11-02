@@ -26,7 +26,7 @@ export function SignIn() {
         fontSize="lg"
         _focus={{
           borderWidth: 2,
-          borderColor: "blue.main",
+          borderColor: "blue.400",
         }}
       />
       <Input
@@ -43,7 +43,7 @@ export function SignIn() {
         fontSize="lg"
         _focus={{
           borderWidth: 2,
-          borderColor: "blue.main",
+          borderColor: "blue.400",
         }}
       />
       <Link
@@ -62,7 +62,7 @@ export function SignIn() {
         mt="6"
         py="4"
         size="lg"
-        bgColor="blue.main"
+        bgColor="blue.400"
         borderRadius={8}
         _text={{
           textAlign: "center",
@@ -70,7 +70,7 @@ export function SignIn() {
           fontSize: "md",
         }}
         _pressed={{
-          bgColor: "blue.secondary",
+          bgColor: "blue.300",
         }}
         w="full"
       >
