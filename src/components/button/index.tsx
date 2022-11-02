@@ -6,7 +6,6 @@ export function Button({ children, ...rest }: ButtonProps) {
   return (
     <NativeButton
       w="full"
-      mt="6"
       py="4"
       size="lg"
       bgColor="blue.400"
