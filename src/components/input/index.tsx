@@ -8,16 +8,14 @@ export function TextInput(props: TextInputProps) {
       px="5"
       py="4"
       bgColor="gray.600"
-      borderWidth={0}
+      borderWidth={1}
+      borderColor="gray.600"
       borderRadius={8}
       placeholderTextColor="gray.300"
       color="gray.100"
       fontFamily="body"
       fontSize="lg"
-      _focus={{
-        borderWidth: 2,
-        borderColor: "blue.400",
-      }}
+      focusOutlineColor="blue.400"
       autoCapitalize="none"
       autoCorrect={false}
       {...props}
