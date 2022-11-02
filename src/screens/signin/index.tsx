@@ -29,7 +29,9 @@ export function SignIn() {
         >
           Esqueceu sua senha?
         </Link>
-        <Button isDisabled>Iniciar sessão</Button>
+        <Button mt="6" isDisabled>
+          Iniciar sessão
+        </Button>
       </Center>
     </KeyboardAvoidingView>
   );
