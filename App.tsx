@@ -7,12 +7,14 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { SignIn } from "@screens/signin";
+import { GuardScreen } from "@screens/guard";
 
 import { THEME } from "./src/styles/theme";
+import { RootStackParamList } from "src/types/routes.type";
 
 SplashScreen.preventAutoHideAsync();
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -35,10 +37,11 @@ export default function App() {
 
   return (
     <NativeBaseProvider theme={THEME}>
-      <View flex={1} onLayout={onLayoutRootView}>
+      <View flex={1} onLayout={onLayoutRootView} bgColor="gray.900">
         <NavigationContainer>
           <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="login" component={SignIn} />
+            <Stack.Screen name="Login" component={SignIn} />
+            <Stack.Screen name="Guard" component={GuardScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
