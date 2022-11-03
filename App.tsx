@@ -4,17 +4,11 @@ import { StatusBar } from "expo-status-bar";
 import { NativeBaseProvider, View } from "native-base";
 import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-import { SignIn } from "@screens/signin";
-import { GuardScreen } from "@screens/guard";
 
 import { THEME } from "./src/styles/theme";
-import { RootStackParamList } from "src/types/routes.type";
+import { AppRoutes } from "@routes/app.routes";
 
 SplashScreen.preventAutoHideAsync();
-
-const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -39,10 +33,7 @@ export default function App() {
     <NativeBaseProvider theme={THEME}>
       <View flex={1} onLayout={onLayoutRootView} bgColor="gray.900">
         <NavigationContainer>
-          <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Login" component={SignIn} />
-            <Stack.Screen name="Guard" component={GuardScreen} />
-          </Stack.Navigator>
+          <AppRoutes />
         </NavigationContainer>
       </View>
       <StatusBar style="light" translucent />
