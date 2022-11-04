@@ -6,7 +6,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { THEME } from "./src/styles/theme";
-import { AppRoutes } from "@routes/app.routes";
+import { Routes } from "@routes/index";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -33,7 +33,7 @@ export default function App() {
     <NativeBaseProvider theme={THEME}>
       <View flex={1} onLayout={onLayoutRootView} bgColor="gray.900">
         <NavigationContainer>
-          <AppRoutes />
+          <Routes />
         </NavigationContainer>
       </View>
       <StatusBar style="light" translucent />
